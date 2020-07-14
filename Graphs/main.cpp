@@ -1,44 +1,33 @@
 #include <iostream>
 
 using namespace std;
-//      r
-//1 2 3 4 5 6 7 8 9 10
 
-template <typename T>
-class Iterator {
-    vector<Node<T>*> stack;
-    int posisition = 0;
+struct City {
+    int id;
+    string name;
+    double latitude;
+    double longitude;
+};
 
-public:
-    Iterator() = default
-
-    Iterator(Node<T>* current) {
-        // 1 2 3 4 5 6 7 8 9 10
-    }
-
-    Iterator operator++() {
-        /*auto current = stack.top()
-        stack.addAll(getNext(current))*/
-        position++;
-    }
-
-    T operator*() {
-        return vector[position]->data;
-    }
-}
+struct Airport {
+    int id;
+    string name;
+    string city;
+    string country;
+    double latitude;
+    double longitude;
+};
 
 int main(int argc, char *argv[]) {
-    BST tree;
-    //add multiple values
+    City lima;
+    Graph<City, double> cities;
+    cities.insertVertex(lima.id, lima);
+    cities.findById(lima.id);
 
-    auto it = tree.begin();
-
-    //add multiple values
-    //remove multiple values
-
-    while (it != tree.end()) {
-        cout << (*it).first << endl;
-    }
+    City galeao;
+    Graph<Airport, double> airports;
+    airports.insertVertex(galeao.id, galeao);
+    airports.createEdge(....)
 
     return EXIT_SUCCESS;
 }

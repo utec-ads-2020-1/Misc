@@ -38,7 +38,7 @@ void fun(Node* head) {
 
     return false;
 }*/
-
+/*
 struct Node {
 	int data;
 	Node* next;
@@ -75,6 +75,12 @@ void moveNode(Node** destRef, Node** sourceRef) {
     *sourceRef = newNode->next;
  	newNode->next = *destRef;
     *destRef = newNode;
+}*/
+
+void func(int **ptr) {
+    static int number = 5;
+ 	*ptr = &number;
+  	number++;
 }
 
 int main(int argc, char* argv[]) {
@@ -96,10 +102,16 @@ int main(int argc, char* argv[]) {
     }
     cout << endl;
 
-    fun(root);*/
+    fun(root);
 
     int numbers[] = {8, 7, 3, 1, 9, 5};
-    cout << findPair(numbers, 6, 8) << endl; 
+    cout << findPair(numbers, 6, 8) << endl; */
+
+    int q = 10;
+    int *ptr = &q;
+    func(&ptr);
+    func(&ptr);
+    cout << *ptr << endl;
 
     return EXIT_SUCCESS;
 }
